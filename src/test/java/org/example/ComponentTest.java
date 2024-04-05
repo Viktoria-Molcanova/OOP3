@@ -49,14 +49,17 @@ class CompositeTest extends BaseComponentTest {
         Component newLeaf = new Leaf();
         ((Composite) component).addComponent(newLeaf);
 
+        //нет метода getComponents в классе Composite
         assertTrue(((Composite) component).getComponents().contains(newLeaf));
     }
 
     @Test
     void testRemoveComponent() {
+        //нет метода getComponents в классе Composite
         Component leafToRemove = ((Composite) component).getComponents().get(0);
         ((Composite) component).removeComponent(leafToRemove);
 
+        //нет метода getComponents в классе Composite
         assertFalse(((Composite) component).getComponents().contains(leafToRemove));
     }
 }
