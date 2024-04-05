@@ -10,7 +10,7 @@ interface Component {
 
 // Класс "Контейнер"
 class Composite implements Component {
-    private final List<Component> components = new ArrayList<>();
+    public final List<Component> components = new ArrayList<>();
 
     public void addComponent(Component component) {
         components.add(component);
